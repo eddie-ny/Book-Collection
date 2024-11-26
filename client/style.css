@@ -1,0 +1,186 @@
+/* Global styles */
+/* Example to set a background image for the entire page */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../assets/yell.jpeg'); /* Use relative path */
+    background-size: cover;  /* Make sure the image covers the entire page */
+    background-position: center;  /* Center the image */
+    background-attachment: fixed;  /* Keep the image fixed while scrolling */
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+h1 {
+    text-align: center;
+    color: #e9e2d3;  /* Accent color */
+    text-shadow: 5px 1px #0f0f0f;
+    
+}
+
+h2 {
+    text-align: center;
+    color: #f0ebe2;  /* Accent color */
+    text-shadow: 5px 1px #0f0f0f;
+}
+
+/* Styling for the modal */
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+    overflow: auto; /* Enable scroll if needed */
+    padding-top: 60px; /* Spacing from top */
+}
+
+/* Modal content (the box itself) */
+.modal-content {
+    background-color: #444444;
+    margin: 5% auto; /* Center the modal */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on the screen size */
+    max-width: 500px;
+    position: relative; /* For positioning the close button */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: #fff; /* Rounded corners */
+}
+
+/* Close button inside the modal */
+/* Close button */
+.close-btn {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    transition: color 0.3s;
+}
+
+/* Hover effect for close button */
+.close-btn:hover,
+.close:focus {
+    color: #ffb81c; /* Accent color */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* New line form layout */
+.modal-content form {
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+    gap: 15px; /* Space between form fields */
+}
+
+/* Form inputs styling */
+.modal-content input, 
+.modal-content select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #888;
+    background-color: #333;
+    color: #fff;
+}
+
+.modal-content button {
+    background-color: #ffb81c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background-color: #e69900;
+}
+
+/* Additional styling for the book list container */
+.book-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    padding: 10px;
+}
+
+.book-card {
+    background-color: rgba(85, 85, 85, 0.7); /* Semi-transparent background (adjust the last value for opacity) */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 23%;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid #444;
+}
+
+.book-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional: To add a background blur effect */
+.book-card {
+    backdrop-filter: blur(10px); /* Add blur effect */
+    background-color: rgba(85, 85, 85, 0.5); /* Semi-transparent with a blur effect */
+}
+
+
+.book-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.book-card h3 {
+    font-size: 18px;
+    color: #fff;
+}
+
+.book-card p {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.book-card .edit-button, .book-card .delete-button {
+    background-color: #ffb81c;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.book-card .edit-button:hover, .book-card .delete-button:hover {
+    background-color: #e69900;
+}
+
+/* Responsiveness */
+@media (max-width: 1200px) {
+    .book-card {
+        width: 48%;
+    }
+}
+
+@media (max-width: 900px) {
+    .book-card {
+        width: 100%;
+    }
+}
+
+
+

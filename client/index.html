@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Book Collection</title>
+    <link rel="stylesheet" href="/client/style.css">
+</head>
+<body>
+    <h1>Book Collection</h1>
+
+    <!-- Form to add a new book -->
+    <form id="addBookForm">
+        <label for="title">Title</label>
+        <input type="text" id="title" required>
+        
+        <label for="author">Author</label>
+        <input type="text" id="author" required>
+
+        <label for="price">Price</label>
+<input type="number" id="price" required step="any">
+
+
+        <label for="genre">Genre</label>
+        <select id="genre">
+            <!-- Genres will be populated here -->
+        </select>
+
+        <label for="copies">Copies Left</label>
+        <input type="number" id="copies" required>
+
+        <button type="submit">Add Book</button>
+    </form>
+
+    
+
+   
+
+    
+
+    <label for="genreFilter">Filter by Genre:</label>
+    <select id="genreFilter">
+        <option value="">Select Genre</option>
+        <!-- Genres will be populated here dynamically -->
+    </select>
+    <button onclick="filterBooksByGenre()">Filter</button>
+    
+
+    <h2>Book List</h2>
+    
+    <!-- Books will be displayed in cards -->
+    <div id="bookList" class="book-list-container">
+        <!-- Book cards will be dynamically inserted here -->
+    </div>
+
+   <!-- Modal to Edit Book -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h2>Edit Book</h2>
+        <form id="editBookForm">
+            <input type="hidden" id="modalBookId"> <!-- Hidden input to store the book ID -->
+
+            <label for="modalTitle">Title</label>
+            <input type="text" id="modalTitle" required>
+
+            <label for="modalAuthor">Author</label>
+            <input type="text" id="modalAuthor" required>
+
+            <label for="modalPrice">Price</label>
+            <input type="number" id="modalPrice" required step="any">
+
+            <label for="modalGenre">Genre</label>
+            <select id="modalGenre">
+                <!-- Genres will be populated here dynamically -->
+            </select>
+
+            <label for="modalCopies">Copies Left</label>
+            <input type="number" id="modalCopies" required>
+
+            <button type="button" onclick="saveBookChanges()">Save Changes</button>
+        </form>
+    </div>
+</div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
