@@ -2,7 +2,7 @@
 /* Example to set a background image for the entire page */
 body {
     font-family: Arial, sans-serif;
-    background-image: url('/client/yell.jpeg'); /* Use relative path */
+    background-image: url('../assets/yell.jpeg'); /* Use relative path */
     background-size: cover;  /* Make sure the image covers the entire page */
     background-position: center;  /* Center the image */
     background-attachment: fixed;  /* Keep the image fixed while scrolling */
